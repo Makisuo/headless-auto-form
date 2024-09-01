@@ -1,0 +1,48 @@
+{
+	"access": "public",
+	"name": "headless-auto-form",
+	"version": "0.0.1",
+	"description": "A headless form library for TypeScript",
+	"homepage": "https://github.com/makisuo/headless-auto-form#readme",
+	"bugs": {
+		"url": "https://github.com/makisuo/headless-auto-form/issues"
+	},
+	"author": "Makisuo <david@hazelapp.dev> (https://makisuo.com)",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/makisuo/headless-auto-form.git"
+	},
+	"files": ["dist"],
+	"type": "module",
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+		"build": "tsc",
+		"ci": "bun run build && bun run check-exports",
+		"local-release": "changeset version && changeset publish",
+		"prepublishOnly": "bun run ci"
+	},
+	"main": "dist/index.js",
+	"devDependencies": {
+		"@arethetypeswrong/cli": "^0.15.4",
+		"@changesets/cli": "^2.27.7",
+		"@internationalized/date": "^3.5.5",
+		"@pixelshades/ui": "^0.6.13",
+		"@total-typescript/tsconfig": "^1.0.4",
+		"@types/react": "^18.3.5",
+		"@types/react-dom": "^18.3.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"typescript": "^5.5.4"
+	},
+	"peerDependencies": {
+		"react": ">18.0.0",
+		"react-dom": ">18.0.0"
+	},
+	"dependencies": {
+		"@pixelshades/cn": "^0.1.8",
+		"@tanstack/react-form": "^0.31.0",
+		"@tanstack/zod-form-adapter": "^0.31.0",
+		"zod": "^3.23.8"
+	}
+}
