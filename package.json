@@ -1,7 +1,7 @@
 {
 	"access": "public",
 	"name": "headless-auto-form",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A headless form library for TypeScript",
 	"homepage": "https://github.com/makisuo/headless-auto-form#readme",
 	"bugs": {
@@ -12,7 +12,9 @@
 		"type": "git",
 		"url": "git+https://github.com/makisuo/headless-auto-form.git"
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"type": "module",
 	"scripts": {
 		"typecheck": "tsc --noEmit",
